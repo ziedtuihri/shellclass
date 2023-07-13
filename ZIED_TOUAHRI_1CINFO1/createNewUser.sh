@@ -3,6 +3,13 @@
 # This script creates an account on the local system.
 # You will be prompted for the account name and password.
 
+# Run as root.
+if [[ "${UID}" -ne 0 ]]
+then
+   echo 'Please run with sudo or as root.' >&2
+   exit 1
+fi
+
 # Ask for the user name.
 read -p 'Enter the username to create: ' USER_NAME
 
