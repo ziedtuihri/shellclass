@@ -41,5 +41,6 @@ Pour tester, tapez :
 +  sudo grep ziedth3 /etc/passwd
 ```
 
-
-
+<h4>Bash and shell I use:</h4>
+<br>
+<img src="./shell_img.PNG">
