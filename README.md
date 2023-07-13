@@ -1,71 +1,28 @@
 # shellclass
 
-how to use the project 
+## How to Use the Project
 
-to create users for test
+To create users for test:
 sudo ./createNewUser.sh
 
-for managements users
+For managing users:
 sudo ./gestion_user.sh [-h|--help] [-g] [-v] [-m]
 
+On peut verrouiller un compte utilisateur de plusieurs manières. En préfixant le mot de passe dans `/etc/passwd` par un "!" (ou en remplaçant "x" par "*"). Voici comment verrouiller et déverrouiller un compte utilisateur :
+- Pour verrouiller : `passwd -l` ou `usermod -L`
+- Pour déverrouiller : `passwd -u` ou `usermod -U`
 
-<br>
-On peut verrouiller un compte utilisateur de plusieurs manières.
-<br>
-En préfixant le mot de passe dans /etc/passwd par un “!”. Si vous utilisez les mots de passe masqués shadow, remplacez x par un *.
-<br>
-C’est ce que font les commandes suivantes :
-<br>
-pour verrouiller passwd -l ou usermod -L<br>
-pour déverrouiller passwd -u ou usermod -U<br>
+To test if a user is locked or not, use the command:
+sudo grep ziedth3 /etc/shadow
 
-test if user is locked or no <br>
-sudo grep ziedth3 /etc/shadow<br>
-
-example of the result <br>
+Example of the result:
 ziedth3:!$y$j9T$aaRRyCXDKlGSgQdOg0Ygy1$on67ikXvfqfxsY9ks.22SCG0CIwkule8oIRdokJJde8:0:0:99999:7:::
-<br>
-user ziedth3 but after the first : there is an ! because is locked <br>
 
-if you don't have ! after the first : is unlocked :) ^_^<br>
+If there is an "!" after the first ":", the user is locked. If there is no "!", the user is unlocked. :)
 
+Il suffit de modifier, grâce à n'importe quel éditeur de texte, le fichier `/etc/passwd`, qui contient une ligne par utilisateur et plusieurs champs par ligne, séparés par ":". Un des champs contient le répertoire par défaut.
 
-<br>
-Il suffit de modifier, grâce à n'importe quel éditeur de texte, le fichier /etc/passwd, qui<br> contient une ligne par utilisateur & plusieurs champs par ligne, séparés par ':'. <br>
-Un des champs contient le répertoire par défaut.
-<br>
-
-pour tester tapé <br>
+Pour tester, tapez :
 sudo grep ziedth3 /etc/passwd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
