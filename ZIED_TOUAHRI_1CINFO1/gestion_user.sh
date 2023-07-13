@@ -43,9 +43,6 @@ function modify_directory(){
 # Run the command and extract the home directory field
   old_directory=$(sudo grep "$user" /etc/passwd | awk -F: '{print $6}')
 
-# Print the extracted directory name
-  echo "************ $old_directory"
-
 # Create the new directory if it doesn't exist
   if [ ! -d "$new_directory" ]; then
     mkdir -p "$new_directory"
