@@ -3,7 +3,10 @@
 ## How to Use the Project
 
 To create users for test:
-sudo ./createNewUser.sh
+```diff
++  sudo ./createNewUser.sh
+```
+
 
 For managing users:
 sudo ./gestion_user.sh [-h|--help] [-g] [-v] [-m]
