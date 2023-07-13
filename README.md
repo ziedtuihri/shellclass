@@ -9,11 +9,19 @@ To create users for test:
 
 
 For managing users:
-sudo ./gestion_user.sh [-h|--help] [-g] [-v] [-m]
+```diff
++  sudo ./gestion_user.sh [-h|--help] [-g] [-v] [-m]
+```
+
 
 On peut verrouiller un compte utilisateur de plusieurs manières. En préfixant le mot de passe dans `/etc/passwd` par un "!" (ou en remplaçant "x" par "*"). Voici comment verrouiller et déverrouiller un compte utilisateur :
-- Pour verrouiller : `passwd -l` ou `usermod -L`
-- Pour déverrouiller : `passwd -u` ou `usermod -U`
+```diff
+-  - Pour verrouiller : `passwd -l` ou `usermod -L`
+```
+
+```diff
++  - Pour déverrouiller : `passwd -u` ou `usermod -U`
+```
 
 To test if a user is locked or not, use the command:
 sudo grep ziedth3 /etc/shadow
